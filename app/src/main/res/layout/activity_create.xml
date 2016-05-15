@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.madus.appointments.CreateActivity">
+
+    <TextView
+
+        android:id="@+id/onDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:text="Error" />
+    <TextView
+        android:id="@+id/title"
+        android:layout_below="@+id/onDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Title: "
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/titleDetails"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/onDate"
+        android:layout_toRightOf="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:onClick="timeButton"
+        android:id="@+id/timeButton"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Set Time"/>
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_below="@+id/timeButton"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:id="@+id/detailsLable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Details:"
+        android:layout_below="@+id/time"
+        android:textSize="20dp"/>
+
+
+
+    <EditText
+        android:id="@+id/details"
+        android:layout_below="@+id/detailsLable"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:textSize="18dp"
+        android:padding="10dp"
+        android:background="@color/background"
+        android:scrollbars="vertical"
+        android:scrollbarFadeDuration="1000"/>
+
+    <Button
+        android:id="@+id/highlighted"
+        android:onClick="highlighted"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/details"
+        android:layout_marginTop="10dp"
+        android:text="Replace Word"/>
+
+
+    <Button
+        android:id="@+id/save"
+        android:onClick="save"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/details"
+        android:layout_marginTop="10dp"
+        android:text="Save Appointment"/>
+
+    <EditText
+        android:id="@+id/thesaurusText"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/save"
+        android:layout_toLeftOf="@+id/thesaurus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/thesaurus"
+        android:onClick="thesaurus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/save"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:text="Thesaurus"/>
+
+    <EditText
+        android:id="@+id/synonyms"
+        android:layout_below="@+id/thesaurusText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="18dp"
+        android:padding="10dp"
+        android:scrollbars="vertical"
+        android:background="@color/background"
+        android:editable="false"
+        android:scrollbarFadeDuration="1000"/>
+
+
+</RelativeLayout>
